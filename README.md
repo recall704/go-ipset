@@ -16,7 +16,7 @@ Install go-ipset using the "go get" command:
 
 Install dependencies:
 
-    go get github.com/Sirupsen/logrus
+    go get github.com/sirupsen/logrus
     go get github.com/coreos/go-semver/semver
 
 ## API Reference ##
@@ -26,7 +26,7 @@ Install dependencies:
 ## Usage ##
 
 ```go
-import "github.com/janeczku/go-ipset/ipset
+import "github.com/janeczku/go-ipset/ipset"
 ```
 
 #### Create a new set
@@ -85,6 +85,6 @@ abusers := ipset.New("ratelimited", "hash:ip", &ipset.Params{Timeout: 60})
 
 #### List entries of a set
 ```go
-// list is []string
-list ipset.List("customers")
+// list
+customers.List()
 ```
