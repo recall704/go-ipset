@@ -12,7 +12,7 @@ go-ipset requires ipset kernel module and userspace utility version 6.0 or great
 
 Install go-ipset using the "go get" command:
 
-    go get github.com/janeczku/go-ipset/ipset
+    go get github.com/recall704/go-ipset/ipset
 
 Install dependencies:
 
@@ -26,7 +26,7 @@ Install dependencies:
 ## Usage ##
 
 ```go
-import "github.com/janeczku/go-ipset/ipset"
+import "github.com/recall704/go-ipset/ipset"
 ```
 
 #### Create a new set
@@ -86,5 +86,5 @@ abusers := ipset.New("ratelimited", "hash:ip", &ipset.Params{Timeout: 60})
 #### List entries of a set
 ```go
 // list
-customers.List()
+ipList, err := customers.List()
 ```
